@@ -1,0 +1,17 @@
+{
+    "name": "mia3/fluidbundle",
+    "authors": [
+        {
+            "name": "Marc Neuhaus",
+            "email": "marc@mia3.com"
+        }
+    ],
+    "require": {
+        "typo3fluid/fluid": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mia3\\FluidBundle\\": "src/"
+        },
+    }
+}

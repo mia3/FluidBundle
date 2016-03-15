@@ -1,0 +1,13 @@
+services:
+    fluid:
+        class: TYPO3Fluid\Fluid\View\TemplateView
+
+    fluid.renderingContext:
+        class: TYPO3Fluid\Fluid\Core\Rendering\RenderingContext
+
+    templating.engine.fluid:
+        class: Mia3\FluidBundle\FluidEngine
+        arguments:
+            - "@fluid"
+            - "@file_locator"
+            - "@service_container"
