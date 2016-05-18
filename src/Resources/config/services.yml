@@ -3,7 +3,9 @@ services:
         class: TYPO3Fluid\Fluid\View\TemplateView
 
     fluid.renderingContext:
-        class: TYPO3Fluid\Fluid\Core\Rendering\RenderingContext
+        class: Mia3\FluidBundle\Fluid\Core\Rendering\RenderingContext
+        arguments:
+          - "@fluid"
 
     templating.engine.fluid:
         class: Mia3\FluidBundle\FluidEngine

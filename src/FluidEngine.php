@@ -5,7 +5,6 @@ use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 use Symfony\Bundle\FrameworkBundle\Templating\TemplateReference;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Templating\TemplateNameParserInterface;
-use Symfony\Component\Templating\Loader\LoaderInterface;
 use Symfony\Component\Templating\TemplateReferenceInterface;
 use Symfony\Component\Config\FileLocatorInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -23,7 +22,9 @@ class FluidEngine implements EngineInterface {
 		$this->fluid = $fluid;
 		$this->locator = $locator;
 		$this->container = $container;
+		$fluid->setRenderingContext($container->get('fluid.renderingContext'));
 		$this->fluid->getRenderingContext()->setTemplatePaths(new SymfonyTemplatePaths);
+		$this->fluid->getRenderingContext()->setContainer($container);
 	}
 
 	/**
