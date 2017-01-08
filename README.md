@@ -10,7 +10,7 @@ composer require mia3/fluidbundle
 
 2. activate bundle
 
-Add ```new Mfc\Symfony\Bundle\FluidBundle\FluidBundle()``` to the Bundles in the ```app\AppKernel.php```
+Add ```new \Mia3\FluidBundle\FluidBundle()``` to the Bundles in the ```app\AppKernel.php```
 
 3. add fluid template engine
 
